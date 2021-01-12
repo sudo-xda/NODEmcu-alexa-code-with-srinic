@@ -1,8 +1,8 @@
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include <ESP8266WiFiMulti.h>
-#include <WebSocketsClient.h> 
-#include <ArduinoJson.h> 
+#include <WebSocketsClient.h> //  https://github.com/kakopappa/sinric/wiki/How-to-add-dependency-libraries
+#include <ArduinoJson.h> // https://github.com/kakopappa/sinric/wiki/How-to-add-dependency-libraries (use the correct version)
 #include <StreamString.h>
 
 ESP8266WiFiMulti WiFiMulti;
@@ -14,12 +14,12 @@ WiFiClient client;
 uint64_t heartbeatTimestamp = 0;
 bool isConnected = false;
  
-#define MyApiKey " " // TODO: Change to your sinric API Key. Your API Key is displayed on sinric.com dashboard
-#define MySSID " " // TODO: Change to your Wifi network SSID
-#define MyWifiPassword " " // TODO: Change to your Wifi network password
+#define MyApiKey "d40dd057-ef4c-407f-840f-94d71db843a8" // TODO: Change to your sinric API Key. Your API Key is displayed on sinric.com dashboard
+#define MySSID "ASUS" // TODO: Change to your Wifi network SSID
+#define MyWifiPassword "aaaaqqqq" // TODO: Change to your Wifi network password
 
-#define DEVICE1 ""  //TODO: Device ID of first device
-#define DEVICE2 " "  //TODO: Device ID of second device
+#define DEVICE1 "5fe4b40a8a66e26a4b87a4ed"  //TODO: Device ID of first device
+#define DEVICE2 " 5fe4b4188a66e26a4b87a4ef"  //TODO: Device ID of second device
  
 const int relayPin1 = 5; // TODO: Change according to your board
 const int relayPin2 = 0; // TODO: Change according to your board
